@@ -1,28 +1,48 @@
-# React + TypeScript + Vite
+# Context API React JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Context API no React oferece uma maneira eficiente de compartilhar estados entre vários componentes em uma árvore de componentes, eliminando a necessidade de passar manualmente o estado por meio de props. Essa abordagem é especialmente útil em situações em que vários componentes precisam acessar e modificar o mesmo estado global.
 
-Currently, two official plugins are available:
+A Context API é uma forma nativa do React utilizada para compartilhar informações entre componentes, sem precisar recorrer ao prop drilling e sem precisar instalar nenhum recurso externo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- `React JS:` O projeto foi desenvolvido utilizando o framework React, que oferece uma abordagem declarativa e eficiente para criar interfaces de usuário interativas.
+  
+- `Context API:` A Context API do React foi empregada para gerenciar o estado global da aplicação, permitindo que componentes compartilhem informações sem a necessidade de prop drilling.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `React Hooks:` Foram utilizados hooks, como o useState, para gerenciar o estado local dos componentes de forma funcional.
 
-- Configure the top-level `parserOptions` property like this:
+## Estrutura do Projeto
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### 1. Criação e Disponibilização do Contexto
+
+- Para criar e disponibilizar o contexto, foi utilizado o método `createContext` do React. Este método retorna um objeto contendo o `Provider` e o `Consumer`. O `Provider` é responsável por fornecer os dados do contexto para os componentes abaixo dele na árvore de componentes. Ele aceita uma propriedade obrigatória chamada value, que contém os dados compartilhados.
+
+### 2. ThemeProvider
+
+- O `ThemeProvider` é um componente que utiliza o `useState` para gerenciar o tema da aplicação. Ele encapsula os componentes filhos com o `ThemeContext.Provider`, permitindo que eles acessem e atualizem o tema.
+
+### 3. Consumindo o Contexto nos Componentes
+
+- Os componentes, como `Header`, `Footer`, e `Imagem`, consomem o contexto usando o hook `useContext`, permitindo que eles acessem o tema atual e a função para alterná-lo.
+
+### 4. Estilos Dinâmicos com CSS
+
+- A aplicação utiliza classes dinâmicas no CSS para aplicar estilos diferentes com base no tema atual. Isso é alcançado adicionando ou removendo classes como `dark` e `light` no componente principal `(div.app)`, `footer`, e outros elementos.
+
+## Como Utilizar
+
+- Clone o repositório:
+
+```
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# introduction-context-api-react
+- Instale as dependências:
+
+```
+cd nome-do-repositorio
+npm install
+```
+
+- Sinta-se à vontade para explorar e modificar o código conforme necessário para atender às suas necessidades.
