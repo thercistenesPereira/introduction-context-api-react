@@ -4,6 +4,8 @@ A Context API no React oferece uma maneira eficiente de compartilhar estados ent
 
 A Context API é uma forma nativa do React utilizada para compartilhar informações entre componentes, sem precisar recorrer ao prop drilling e sem precisar instalar nenhum recurso externo.
 
+![nome qualquer](./src/assets/video-project.gif)
+
 ### Tecnologias Utilizadas
 
 - `React JS:` O projeto foi desenvolvido utilizando o framework React, que oferece uma abordagem declarativa e eficiente para criar interfaces de usuário interativas.
