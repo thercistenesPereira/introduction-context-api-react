@@ -1,5 +1,7 @@
 # Context API React JS
 
+![Static Badge](https://img.shields.io/badge/Therc%C3%ADstenes-ContextAPI-purple)
+
 A Context API no React oferece uma maneira eficiente de compartilhar estados entre vários componentes em uma árvore de componentes, eliminando a necessidade de passar manualmente o estado por meio de props. Essa abordagem é especialmente útil em situações em que vários componentes precisam acessar e modificar o mesmo estado global.
 
 A Context API é uma forma nativa do React utilizada para compartilhar informações entre componentes, sem precisar recorrer ao prop drilling e sem precisar instalar nenhum recurso externo.
